@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <script src="https://kit.fontawesome.com/66a6a9b4b6.js" crossorigin="anonymous"></script>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Ghost Strike</title>
+    <link rel="shortcut icon" href="55favicon.ico">
+    <link rel="stylesheet" href="zombies1.css">
+    <script src="55UnityProgress.js"></script>
+    <script src="UnityLoader.js"></script>
+    <script>
+      var unityInstance = UnityLoader.instantiate("unityContainer", "game.json", {onProgress: UnityProgress});
+    </script>
+  </head>
+  <body>
+    <div style="text-align: center; display: inline;;"class="webgl-content" >
+      <div id="unityContainer" style="width: 960px; height: 540px;"></div>
+      <div class="footer">
+        <div class="webgl-logo"></div>
+  
+    </div>
+    <button class="fullscreen" onclick="unityInstance.SetFullscreen(1)"><i class="fa-solid fa-expand"></i></button>
+  </body>
+</html>
