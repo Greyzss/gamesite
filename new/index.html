@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/66a6a9b4b6.js" crossorigin="anonymous"></script>
+  <title>Greyz's Games</title>
+</head>
+<body>
+<!-- MENU JS -->
+<ul class="menu">
+
+
+
+  <li id="share-menu" onmousedown="share()">Share <i class="fa-solid fa-share"></i></li>
+  <hr>
+  <li id="embed-menu"onmousedown="getEmbedCode(getCurrentURL(), document.title);">Embed <i class="fa-solid fa-code"></i></li>
+  <hr>
+  <li id="cloak-page" onmousedown="cloakPage()">Cloak Page <i id="cloak-icon" class="fa-solid fa-eye fa-eye-slash"></i></li>
+</ul>
+
+
+
+  <section class="header">
+<h1 class="site-name">Greyz's Games</h1>
+<button class="volume-button" onmousedown="toggleVolumeButtonLook()"><i  id="volume-button" class="fa-solid  fa-volume-xmark fa-volume-high"></i></button>
+  <input onkeyup="searchGames()" placeholder="Search Games" type="search" class="game-search" 
+  name="game-seach" id="game-search">
+  <button class="grid-view-button" onmousedown="toggleGridView()"><i id="grid-toggle" class="fa-solid fa-minimize fa-maximize"></i></button>
+  <form  class="theme-picker" action="">
+    <fieldset>
+
+      <legend class="visually-hidden">Choose a Theme</legend>
+      <label class="visually-hidden" for="theme">Light Theme</label>
+      <input type="radio"
+      name="theme"
+      id="light-theme" checked>
+
+      <label class="visually-hidden" for="theme">Dark Theme</label>
+      <input type="radio"
+      name="theme"
+      id="dark-theme">
+      
+      <label class="visually-hidden" for="theme">Pink Theme</label>
+      <input type="radio"
+      name="theme"
+      id="pink-theme">
+
+      <label class="visually-hidden" for="theme">Blue Theme</label>
+      <input type="radio"
+      name="theme"
+      id="blue-theme">
+
+      <label class="visually-hidden" for="theme">Green Theme</label>
+      <input type="radio"
+      name="theme"
+      id="green-theme">
+
+
+
+    </fieldset>
+  </form>
+  
+</section>
+<div id="grid" class="card-grid-expanded">
+
+<div  id="game-card" class="game-card">
+  <img src="/main/images/2048.png" alt="2048 Image" id="game-image" class="game-image-expanded">
+  <p id="game-name"class="game-name">2048</p>
+  <p id="game-description" class="game-description">2048 is a challenging number puzzle for kids and grown-ups. The object is to join the numbers to get the 2048 tile.</p>
+  <button id="play-button" class="play-now-button">Play Now</button>
+</div>
+
+<div  id="game-card" class="game-card">
+  <img src="/main/images/astray.png" alt="Astray Image" id="game-image" class="game-image-expanded">
+  <p id="game-name"class="game-name">Astray</p>
+  <p id="game-description" class="game-description">Roll the ball through the mazes to get out of it. You can use your Arrow keys for the movement control. Each level of the maze has more complexity than the previous one.</p>
+  <button id="play-button" class="play-now-button">Play Now</button>
+</div>
+
+<div  id="game-card" class="game-card">
+  <img src="/basketball-bros/thumb.jpg" alt="Basket Bros Image" id="game-image" class="game-image-expanded">
+  <p id="game-name"class="game-name">Basket Bros</p>
+  <p id="game-description" class="game-description">BasketBros is a basketball game in which you compete against formidable opponents.</p>
+  <button id="play-button" class="play-now-button">Play Now</button>
+</div>
+
+<div  id="game-card" class="game-card">
+  <img src="/main/images/bitlife.png" alt="Bitlife Image" id="game-image" class="game-image-expanded">
+  <p id="game-name"class="game-name">Bitlife</p>
+  <p id="game-description" class="game-description">BitLife is a game where you have a randomized name and character, and are expected to live this new life to the fullest.</p>
+  <button id="play-button" class="play-now-button">Play Now</button>
+</div>
+
+<div  id="game-card" class="game-card">
+  <img src="/main/images/bouncy-heros.png" alt="Bouncy Heroes Image" id="game-image" class="game-image-expanded">
+  <p id="game-name"class="game-name">Bouncy Hereos</p>
+  <p id="game-description" class="game-description">The bouncy heroes are back at doing what they do best... being bouncy? and smashing evil alien beings into oblivion</p>
+  <button id="play-button" class="play-now-button">Play Now</button>
+</div>
+
+<div  id="game-card" class="game-card">
+  <img src="/cluster-rush/icon.jpg" alt="Cluster Rush Image" id="game-image" class="game-image-expanded">
+  <p id="game-name"class="game-name">Cluster Rush</p>
+  <p id="game-description" class="game-description">A crazy, fast-paced game that will require focus and precision. Your goal is to jump between loaded trucks, trying not to fall.</p>
+  <button id="play-button" class="play-now-button">Play Now</button>
+</div>
+
+<div  id="game-card" class="game-card">
+  <img src="/main/images/cookie-clicker.png" alt="Cookie Clicker Image" id="game-image" class="game-image-expanded">
+  <p id="game-name"class="game-name">Cookie Clicker</p>
+  <p id="game-description" class="game-description">Cookie Clicker is an alluring game with a baking journey. In the game you will be a bakeryou can produce thousands of cookies.</p>
+  <button id="play-button" class="play-now-button">Play Now</button>
+</div>
+
+<div  id="game-card" class="game-card">
+  <img src="/main/images/factory-balls-forever.avif" alt="Factory Balls Forever Image" id="game-image" class="game-image-expanded">
+  <p id="game-name"class="game-name" style=" font-size: min(2.6vw, 40px);">Factory Balls Forever</p>
+  <p id="game-description" class="game-description">Factory Balls Forever is a puzzle where you have to color the balls correctly! Use different tools to cover the ball before start painting over it.</p>
+  <button id="play-button" class="play-now-button">Play Now</button>
+</div>
+
+<div  id="game-card" class="game-card">
+  <img src="/google-feud/splash.png" alt="Google Fued Image" id="game-image" class="game-image-expanded">
+  <p id="game-name"class="game-name">Google Feud</p>
+  <p id="game-description" class="game-description">A twist on a tv game show in which players are given a series of phrases and must make guesses as to how the audience would respond.</p>
+  <button id="play-button" class="play-now-button">Play Now</button>
+</div>
+
+<div  id="game-card" class="game-card">
+  <img src="/hex-gl/Hexgl-image-1.jpg" alt="HexGL Image" id="game-image" class="game-image-expanded">
+  <p id="game-name"class="game-name">HexGL</p>
+  <p id="game-description" class="game-description">HexGL is a time-trial racing game in single player mode. The objective of the game is to finish the entire course as fast as you can.</p>
+  <button id="play-button" class="play-now-button">Play Now</button>
+</div>
+
+
+<div  id="game-card" class="game-card">
+  <img src="/main/images/retro-bowl.png" alt="Retro Bowl Image" id="game-image" class="game-image-expanded">
+  <p id="game-name"class="game-name">Retro Bowl</p>
+  <p id="game-description" class="game-description">Retro Bowl is an American style football game created by New Star Games. Are you ready to manage your dream team into victory?</p>
+  <button id="play-button" class="play-now-button">Play Now</button>
+</div>
+
+<div  id="game-card" class="game-card">
+  <img src="/main/images/slope.jpeg" alt="Slope Image" id="game-image" class="game-image-expanded">
+  <p id="game-name"class="game-name">Slope</p>
+  <p id="game-description" class="game-description">Slope  is a speed run game where you can drive a ball rolling on slopes and obstacles. See how far you can go in this endless course.</p>
+  <button id="play-button" class="play-now-button">Play Now</button>
+</div>
+
+<div  id="game-card" class="game-card">
+  <img src="/smash-karts/images/icon-512.png" alt="Smash Karts Image" id="game-image" class="game-image-expanded">
+  <p id="game-name"class="game-name">Smash Karts</p>
+  <p id="game-description" class="game-description">Smash Karts is a free Multiplayer Kart Battle Arena game. Drive fast. Fire rockets. Make big explosions.</p>
+  <button id="play-button" class="play-now-button">Play Now</button>
+</div>
+
+<div  id="game-card" class="game-card">
+  <img src="/stickman-hook/unnamed.jpg" alt="Stickman Hook Image" id="game-image" class="game-image-expanded">
+  <p id="game-name"class="game-name">Stickman Hook</p>
+  <p id="game-description" class="game-description">Avoid the obstacles that stands in your way. Can you execute all these acrobatic tricks in a row like a boss? Will you be the first survivor to cross the finish line?</p>
+  <button id="play-button" class="play-now-button">Play Now</button>
+</div>
+
+<div  id="game-card" class="game-card">
+  <img src="/main/images/subway-surfers.jpeg" alt="Subway Surfers Image" id="game-image" class="game-image-expanded">
+  <p id="game-name"class="game-name">Subway Surfers</p>
+  <p id="game-description" class="game-description">An endless runner game. You play as Jake, who surfs the subways and tries to escape from the grumpy Inspector and his dog.</p>
+  <button id="play-button" class="play-now-button">Play Now</button>
+</div>
+
+<div  id="game-card" class="game-card">
+  <img src="/main/images/tanuki-sunset.png" alt="Tanuki Sunset Image" id="game-image" class="game-image-expanded">
+  <p id="game-name"class="game-name">Tanuki Sunset</p>
+  <p id="game-description" class="game-description">Master the longboard as you drift through  mountain ranges, swerve through city streets, and along the  beaches of Sunset Island.</p>
+  <button id="play-button" class="play-now-button">Play Now</button>
+</div>
+
+
+
+
+
+
+</div>
+</body>
+<script src="script.js"></script>
+<script src="rightClickMenu.js"></script>
+</html>

@@ -1,0 +1,46 @@
+root {
+  --background-color: #FFC2E2;
+  --main-elements-color: #6E44FF;
+  --main-elements-background-color: #FF90B3;
+  --secondary-elements-background-color: #b892ff;
+  --font-color: white;
+  --hover-opacity: 0.7;
+}
+
+.menu {
+  visibility: hidden;
+  color: var(--font-color);
+  text-align: left;
+  list-style: none;
+  background-color: var(--secondary-elements-background-color);
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 200px;
+  position: fixed;
+  left: 50%;
+  margin-right: 0px;
+  padding-left: 0;
+  border-radius: 10px;
+}
+
+.menu > li {
+  user-select: none;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 10px;
+  transition: all 0.15s;
+  border-radius: 10px;
+}
+
+
+.menu > li:hover {
+  background-color: var(--main-elements-color);
+}
+
+hr {
+  color: var(--font-color);
+  margin: 0;
+  padding: 0;
+}
+
+
